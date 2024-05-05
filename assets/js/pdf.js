@@ -1,3 +1,42 @@
+// Function to load PDF preview into modal
+    function loadPdfPreview(pdfUrl) {
+      var pdfPreview = document.getElementById('pdfPreview');
+      pdfPreview.src = pdfUrl;
+    }
+  
+    // Add event listener to the preview button
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.preview-btn').forEach(function(button) {
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+          var pdfUrl = this.getAttribute('href');
+          loadPdfPreview(pdfUrl);
+          var modal = new bootstrap.Modal(document.getElementById('previewModal'));
+          modal.show();
+        });
+      });
+    });
+
+    // Function to load PDF preview into modal
+    function loadPdfPreview(pdfUrl) {
+      var pdfPreview = document.getElementById('pdfPreview');
+      pdfPreview.src = pdfUrl;
+    }
+  
+    // Add event listener to the preview button
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.preview-btn1').forEach(function(button) {
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+          var pdfUrl = this.getAttribute('href');
+          loadPdfPreview(pdfUrl);
+          var modal = new bootstrap.Modal(document.getElementById('previewModal'));
+          modal.show();
+        });
+      });
+    });
+
+
 // Function to open PDF preview in a popup
 function openPdfPreview(url) {
     var popup = window.open(url, '_blank', 'width=600,height=780,scrollbars=no,resizable=yes');
